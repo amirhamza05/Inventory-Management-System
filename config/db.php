@@ -3,4 +3,4 @@
 		define('db_user', 'root'); 
 		define('db_pass', '');
 		define('db_name', 'rakib');
-	?>
+?>
