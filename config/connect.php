@@ -8,7 +8,8 @@ class database
     public $db = db_name;
     public $result;
     public $conn;
-    
+    public $site_name="Alom Enterprice";
+
     //conection start
     public function __construct()
     {
@@ -23,6 +24,15 @@ class database
             echo "Conection failed";
         } else
             return 1;
+    }
+
+    public function date(){
+        return $this->get_now_time();
+    }
+
+    public function get_now_time(){
+        $now=date("Y-m-d H:i:s", time());
+        return $now;
     }
     
     public function select($query)

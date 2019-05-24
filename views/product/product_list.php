@@ -7,6 +7,13 @@
 	}
 </script>
 
+<?php
+    
+   $d=$user_ob->check_login_user("hamza05","123456");
+   echo "$d";
+
+?>
+
 <div class="row">
 <div class="col-md-12">
             <div class="dashboard_box">
