@@ -37,7 +37,7 @@ $name="hamza";
           </span> 
         
         
-          <a class="" href="index.php"><span class="navbar-brand"  style="color:var(--font-color)"><font class="logo_title">Management</font></span></a>
+          <a class="" href="index.php"><span class="navbar-brand"  style="color:var(--font-color)"><font class="logo_title">Alom Brothers</font></span></a>
           <span class="nev_bar_button_area">
              <!-- here button -->
            

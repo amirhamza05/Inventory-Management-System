@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="" type="image/gif" sizes="16x16">
-    <title>ghsdfg</title>
+    <title><?php "Alom Brother"; ?></title>
 
     <?php
 		include "include/layout/lib.php";

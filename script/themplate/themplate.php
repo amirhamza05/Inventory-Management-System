@@ -6,6 +6,7 @@ class class_name {
      
      $this->db=new database();
      $this->conn=$this->db->conn;
+     $this->data=new data();
  }
  
 //end dabtabase connection

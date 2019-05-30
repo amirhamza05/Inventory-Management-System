@@ -31,8 +31,8 @@
 </style>
     
     <?php
-        $user_name="hamza";
-        $user_email="hello";
+        $user_name=$login_user['uname'];
+        $phone=$login_user['phone'];
         $id=4;
         $photo="png";
     ?>
@@ -48,7 +48,7 @@
     </a>
                             <div class="user-name" style="">
                                 <h5><a href="user_info.php?user_id=<?php echo "$id"; ?>"><?php echo "$user_name"; ?></a></h5>
-                                <span><a href="user_info.php?user_id=<?php echo "$id"; ?>"><?php echo "$user_email"; ?></a></span>
+                                <span><a href="user_info.php?user_id=<?php echo "$id"; ?>"><?php echo "$phone"; ?></a></span>
                             </div>
                         </div>
 
@@ -58,84 +58,27 @@
 
                 <li><a href="index.php" class="nav-header"><i class="fa fa-fw fa-dashboard side_bar_icon"></i> Dashboard</a></li>
 
-                <li><a href="javascript:void(0)" data-target=".legal-menu_s" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-mortar-board side_bar_icon"></i> Students<i class="fa fa-collapse"></i></a></li>
+                <li><a href="pos.php" class="nav-header"><i class="fa fa-fw fa-dashboard side_bar_icon"></i> Pos</a></li>
+
+                <li><a href="javascript:void(0)" data-target=".legal-menu_s" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-mortar-board side_bar_icon"></i> Product<i class="fa fa-collapse"></i></a></li>
 
                 <li>
                     <ul class="legal-menu_s nav nav-list collapse">
-                        <li class=""><a href="student_list.php" class=""><span class="fa fa-caret-right"></span>Student List</a></li>
-                        <li><a href="add_student.php"><span class="fa fa-caret-right"></span>Add Student</a></li>
+                        <li class=""><a href="student_list.php" class=""><span class="fa fa-caret-right"></span>Add Product</a></li>
+                        <li><a href="add_student.php"><span class="fa fa-caret-right"></span>Product List</a></li>
                         <li><a href="attend.php"><span class="fa fa-caret-right"></span>Attendence</a></li>
                     </ul>
                 </li>
 
-                <li><a href="batch_list.php" class="nav-header"><i class="fa fa-outdent  side_bar_icon"></i> Batch</a></li>
+                <li><a href="batch_list.php" class="nav-header"><i class="fa fa-outdent  side_bar_icon"></i> Stock</a></li>
 
-                <li><a href="program_list.php" class="nav-header"><i class="fa fa-renren side_bar_icon"></i> Program</a></li>
+                <li><a href="program_list.php" class="nav-header"><i class="fa fa-renren side_bar_icon"></i> Customer</a></li>
 
-                <li><a href="subject_list.php" class="nav-header"><i class="fa fa-fw fa-book side_bar_icon"></i> Subject</a></li>
+                <li><a href="subject_list.php" class="nav-header"><i class="fa fa-fw fa-book side_bar_icon"></i> Account</a></li>
 
-                <li><a href="javascript:void(0)" data-target=".result" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-th-list side_bar_icon"></i> Exam<i class="fa fa-collapse"></i></a></li>
+                
 
-                <li>
-                    <ul class="result nav nav-list collapse">
-                        <li><a href="exam_list.php" class="l_active"><span class="fa fa-caret-right"></span>Exam List</a></li>
-                        <li><a href="result.php" class="l_active"><span class="fa fa-caret-right"></span>Show Result</a></li>
-                        <li><a href="add_result.php" class="l_active"><span class="fa fa-caret-right"></span>ADD Result</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".notice" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-bullhorn side_bar_icon"></i> Notice<i class="fa fa-collapse"></i></a></li>
-
-                <li>
-                    <ul class="notice nav nav-list collapse">
-
-                        <li><a href="notice_list.php"><span class="fa fa-caret-right"></span>Notice List</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".user" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-user side_bar_icon"></i> User<i class="fa fa-collapse"></i></a></li>
-
-                <li>
-                    <ul class="user nav nav-list collapse">
-                        <li><a href="user_list.php" class="l_active"><span class="fa fa-caret-right"></span> User List</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".account" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-rupee side_bar_icon"></i> Account<i class="fa fa-collapse"></i></a></li>
-
-                <li>
-                    <ul class="account nav nav-list collapse">
-                        <li><a href="account.php?type=expence" class="l_active"><span class="fa fa-caret-right"></span>Add Expence</a></li>
-                        <li><a href="account.php?type=income" class="l_active"><span class="fa fa-caret-right"></span>Add Income</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".report" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-file-text-o side_bar_icon"></i> Report<i class="fa fa-collapse"></i></a></li>
-
-                <li>
-                    <ul class="report nav nav-list collapse">
-                        <li><a href="report.php?type=payment_report" class="l_active"><span class="fa fa-caret-right"></span>Payment Report</a></li>
-                        <li><a href="report.php?type=expence_report"><span class="fa fa-caret-right"></span>Expence Report</a></li>
-                        <li><a href="report.php?type=income_report"><span class="fa fa-caret-right"></span>Income Report</a></li>
-                        <li><a href="report.php?type=profit_report"><span class="fa fa-caret-right"></span>Profit Report</a></li>
-                        <li><a href="report.php?type=attendence_report"><span class="fa fa-caret-right"></span>Attendence Report</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".sms" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-envelope-o side_bar_icon"></i> SMS<i class="fa fa-collapse"></i></a></li>
-
-                <li>
-                    <ul class="sms nav nav-list collapse">
-                        <li><a href="sms_dashboard.php" class="l_active"><span class="fa fa-caret-right"></span>SMS Dashboard</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="javascript:void(0)" data-target=".setting" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-cogs side_bar_icon"></i> Setting<i class="fa fa-collapse"></i></a></li>
+                <li><a href="javascript:void(0)" data-target=".setting" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-cogs side_bar_icon"></i> Report<i class="fa fa-collapse"></i></a></li>
 
                 <li>
                     <ul class="setting nav nav-list collapse">

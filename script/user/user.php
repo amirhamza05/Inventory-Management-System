@@ -1,29 +1,17 @@
 <?php
 class user {
  
-public $user_list_data;
 
  public function __construct(){
      
     $this->db=new database();
     $this->conn=$this->db->conn;
+    $this->data=new data();
  }
 
- public function user_list(){
-
- 	$sql="select * from user";
- 	$info=$this->db->get_sql_array($sql);
- 	$data=array();
- 	foreach ($info as $key => $value) {
- 		$id=$value['id'];
- 		$data[$id]=$value;
- 	}
- 	$this->user_list_data=$data;
- 	return $data;
- }
 
  public function single_user_info($user_id){
- 	$data=$this->user_list_data;
+ 	$data=$this->data->user_list();
  	return (isset($data[$user_id]))?$data[$user_id]['id']:-1;
  }
 
