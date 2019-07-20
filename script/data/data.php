@@ -40,6 +40,18 @@ class data {
  public function unit_list(){
  	return $this->get_table_data("unit");
  }
+ 
+ public function product_list(){
+ 	return $this->get_table_data("product");
+ }
+
+ public function get_last_id($table_name){
+ 	
+ 	$sql="select * from $table_name";
+ 	if(mysqli_query($this->db->conn, $sql)){
+    	return mysqli_insert_id($this->db->conn);
+  	}
+ }
 
 
 

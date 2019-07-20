@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" type="text/css" href="style/stylesheets/theme.css">
 
-	<body class="theme-blue">
+	<body class="theme-blue" id="body_id">
 
 		<?php
             

@@ -16,28 +16,11 @@ body{
 .invoice_filed{
  background-color: #BABABA;
  width: 104%;
-  height: 570px;
+  height: 100%;
   padding-top: 0px;
 
 }
 
-thead{
-  width: 100%;
-}
-
-table{
- height:360px;
- width: 100%;              // <-- Select the height of the table
- display: -moz-groupbox;
- border-width: 0px;    // Firefox Bad Effect
-}
-tbody{
-  overflow-y: scroll;      
-  height: 360px;              
-  <-- Select the height of the body
-  width: 100%;
-  position: absolute;
-}
 
 .td_product_list{
   background-color: #ffffff;
@@ -86,7 +69,7 @@ tbody{
   float: left;
 }
 .inv_des{
-  height: 420px;
+  height: 100%;
   background-color: #ffffff;
   overflow-y: scroll;
 }

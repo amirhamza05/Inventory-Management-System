@@ -7,8 +7,10 @@
 
     <div class="modal-content">
         <div id="modal_sm_header" class="modal_content_header">Header</div>
-            <div class="modal_sm_body" id="modal_sm_body">
-                          
+            <div class="modal_sm_body">
+                <div id="modal_sm_error" class='modal_error'></div>
+                <div id="modal_sm_msg" class='modal_msg'></div>
+                <div id="modal_sm_body"></div>           
             </div>
 
     </div>
@@ -25,7 +27,10 @@
 
     <div class="modal-content">
         <div id="modal_md_header" class="modal_content_header">Header</div>
-            <div class="modal_md_body" id="modal_md_body">
+            <div class="modal_md_body">
+              <div id="modal_md_error" class='modal_error'></div>
+              <div id="modal_md_msg" class='modal_msg'></div>
+              <div id="modal_md_body"></div>
                            
             </div>
 
@@ -43,8 +48,10 @@
 
     <div class="modal-content">
         <div id="modal_lg_header" class="modal_content_header">Header</div>
-            <div class="modal_lg_body" id="modal_lg_body">
-                           
+            <div class="modal_lg_body">
+              <div id="modal_lg_error" class='modal_error'></div>
+              <div id="modal_lg_msg" class='modal_msg'></div>
+              <div id="modal_lg_body"></div>
             </div>
 
     </div>
@@ -103,17 +110,44 @@
       outline: none;
       background-color: #049ad1;
     }
+    .modal_error{
+      padding: 5px;
+      color: #C47A77;
+      font-size: 15px;
+      font-weight: bold;
+      border: 1px dotted #ECCDD1;
+      display: none;
+      background-color: #F2DEDE;
+      margin-bottom: 10px;
+    }
+
+    .modal_msg{
+      padding: 5px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: bold;
+      border: 1px dotted #10ac84;
+      display: none;
+      background-color: #1dd1a1;
+      margin-bottom: 10px;
+    }
+    .modal_error li{
+
+    }
 
     
 </style>
 
 <script type="text/javascript">
-    function modal(type,header="Header",permission="open"){
-        
+  
+    function modal_action(type,header="Header",permission="open"){
         if(type=="sm")modal_sm(permission,header);
         else if(type=="md")modal_md(permission,header);
         else if(type=="lg")modal_lg(permission,header);  
-
+        error_div="modal_"+type+"_error";
+        msg_div="modal_"+type+"_msg";
+        document.getElementById(error_div).style.display="none";
+        document.getElementById(msg_div).style.display="none";
     }
 
 

@@ -1,7 +1,7 @@
 
 <style type="text/css">
 	.select_header{
-		height: 79px;
+		height: 12%;
 		margin-left:-15px;
 		margin-top:-15px;
 		margin-right:-15px; 
@@ -12,12 +12,12 @@
 
 	.card_product{
 		overflow-y: scroll; 
-		height:560px;
+		height:100%;
 		background-color: #BABABA;
 		padding-top: 10px
 	}
 	.product_list{
-		height:538px;
+		height: 89%;
 	}
 
 </style>

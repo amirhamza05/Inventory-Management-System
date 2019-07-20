@@ -1,7 +1,10 @@
 <?php
 
 session_start();
-include "include/script.php";
+include "config/config.php";
+include "script/data/data.php";
+include "script/user/user.php";
+$user_ob=new user();
 
 if(isset($_POST['login'])){
 

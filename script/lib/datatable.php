@@ -3,11 +3,20 @@ class datatable {
    
 	public function genarate_datatable($table){
 		$title=$table['title'];
-		$btn=(isset($table['add_btn']))?$table['add_btn']:-1;
+
 		$col=$table['col'];
 		$data=$table['data'];
 		$action=(isset($table['action']))?1:-1;
-		$function_name=(isset($table['function_name']))?$this->make_js_function($table['function_name'],"insert"):"";
+		
+        $btn=-1;
+        $db_table=$table['db_table'];
+
+        if(isset($table['add_btn'])){
+            $btn=$table['add_btn'];
+            $db_table=$table['db_table'];
+            $insert_function=$this->make_js_function($db_table,"insert");
+        }
+
 		
 ?>
 
@@ -23,7 +32,7 @@ class datatable {
                 <div class="box_body">
                 	<?php if($btn!=-1){ ?>
                 		 <div class="pull-rightt" style="margin-top: -20px;">
-							<center><button class="button" onclick="<?php echo $function_name; ?>">+ <?php echo $btn; ?></button></center>
+							<center><button class="button" onclick="<?php echo $insert_function; ?>">+ <?php echo $btn; ?></button></center>
 						</div>
 					<?php } ?>
                 
@@ -35,13 +44,14 @@ class datatable {
                 			<td class="td_list1"><?php echo "$value"; ?></td>
                 		<?php } ?>	
                 		
-                			
+                			<td class="td_list1">Action</td>
                 		</tr>
                 	</thead>
                 	<tbody>
-                		<?php 
+                		<?php
+                        
                 		foreach ($data as $key => $value) {
-                            
+                            $id=$value['ID'];
                 		 ?>
  
 						<tr>
@@ -54,7 +64,13 @@ class datatable {
                                 	<?php echo $value1; ?>    
                             	</td>
                         	<?php } ?>
-                			
+                			<td  class="td_list2">
+                                <button class="btn btn-primary btn-xs" style="margin-right: 4px;" title="Update" data-title="Update" onclick="form_view('<?php echo "$db_table"; ?>','update',<?php echo "$id"; ?>)" >
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button class="btn btn-danger btn-xs" title="Delete" data-title="Delete" onclick="form_view('<?php echo "$db_table"; ?>','delete',<?php echo "$id"; ?>)" ><span class="glyphicon glyphicon-trash"></span></button>
+                                
+                            </td>
                 			
                 		</tr>
                 		<?php } ?>
@@ -84,17 +100,14 @@ class datatable {
 
 	}
 
-	public function make_js_function($function_name,$operation,$id=0){
-		$res="hello('insert')";
-		if($operation=="insert")$res="$function_name('insert')";
-		else if($operation=="update")$res="$function_name('update',$id)";
-		else $res="$function_name('delete',$id)";
+	public function make_js_function($table_name,$operation,$id=0){
+		$res="";
+		if($operation=="insert")$res="form_view('$table_name','insert')";
+		else if($operation=="update")$res="form_view($table_name'insert',$id)";
+		else $res="form_view($table_name'delete',$id)";
 		return $res;
 	}
 
 }
 ?>
 
-front end: html,css,bootstrap
-back end: php,javascript,ajax
-database: mysql

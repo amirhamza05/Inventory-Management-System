@@ -5,8 +5,18 @@ Dtatable Style
 
 
 /*select style*/
-
-
+.select_class{
+  padding: 5px;
+  width: 48%;
+}
+.btn_class{
+      background-color: var(--bg-color);
+      color: var(--font-color);
+      padding: 6px;
+      font-size: 15px;
+      border-width: 0px;
+      border-radius: 2px;
+  }
 
 .select {
   position: relative;

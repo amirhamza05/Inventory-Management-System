@@ -60,21 +60,13 @@
 
                 <li><a href="pos.php" class="nav-header"><i class="fa fa-fw fa-dashboard side_bar_icon"></i> Pos</a></li>
 
-                <li><a href="javascript:void(0)" data-target=".legal-menu_s" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-mortar-board side_bar_icon"></i> Product<i class="fa fa-collapse"></i></a></li>
+                <li><a href="product_list.php" class="nav-header"><i class="fa fa-outdent  side_bar_icon"></i> Product List</a></li>
 
-                <li>
-                    <ul class="legal-menu_s nav nav-list collapse">
-                        <li class=""><a href="student_list.php" class=""><span class="fa fa-caret-right"></span>Add Product</a></li>
-                        <li><a href="add_student.php"><span class="fa fa-caret-right"></span>Product List</a></li>
-                        <li><a href="attend.php"><span class="fa fa-caret-right"></span>Attendence</a></li>
-                    </ul>
-                </li>
+                <li><a href="page_view.php?action=brand" class="nav-header"><i class="fa fa-outdent  side_bar_icon"></i> Brand</a></li>
 
-                <li><a href="batch_list.php" class="nav-header"><i class="fa fa-outdent  side_bar_icon"></i> Stock</a></li>
+                <li><a href="page_view.php?action=unit" class="nav-header"><i class="fa fa-renren side_bar_icon"></i> Unit</a></li>
 
-                <li><a href="program_list.php" class="nav-header"><i class="fa fa-renren side_bar_icon"></i> Customer</a></li>
-
-                <li><a href="subject_list.php" class="nav-header"><i class="fa fa-fw fa-book side_bar_icon"></i> Account</a></li>
+                <li><a href="page_view.php?action=category" class="nav-header"><i class="fa fa-fw fa-book side_bar_icon"></i> Category</a></li>
 
                 
 
